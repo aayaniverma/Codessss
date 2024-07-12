@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+
+header {
+    background-color: white;
+    color: black;
+    padding-top: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header nav {
+    height: 60px; /* added this to set the nav height */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header nav li {
+    padding-top: 19px;
+    margin-right: 20px;
+    padding-left: 30px;
+}
+
+header nav li form {
+    display: flex;
+    align-items: center;
+}
+
+header nav li input[type="search"] {
+    background-color: #d3d3d3ee;
+    color: gray;
+    height: 30px;
+    border: none;
+    width: 450px; /* adjust width as needed */
+    border-radius: 2px;
+}
+
+header nav li button[type="submit"] {
+    background-color: #d3d3d3ee;
+    color: gray;
+    border: none;
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 2px; /* add some space between input and button */
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Middle Section Styles */
+
+.middle-section {
+    width: 100%;
+    display: table;
+    margin: 20px 0;
+}
+
+.middle-section table {
+    width: 90%; /* Ensures equal column widths */
+    border-spacing: 10px;
+    margin: 0 auto;
+}
+
+.middle-section table th {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: left;
+}
+
+.middle-section table td {
+    padding: 10px;
+    border: 1px solid #f4f4f4;
+    vertical-align: top; /* Ensures content starts from the top */
+}
+
+.middle-section .text-cell {
+    vertical-align: top; /* Ensures text starts from the top */
+}
+
+footer {
+    background-color: white;
+    color: gray;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}

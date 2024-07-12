@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -30,7 +34,7 @@ header {
 }
 
 header nav {
-    height: 75px; /* added this to set the nav height */
+    height: 60px; /* added this to set the nav height */
 }
 
 header nav ul {
@@ -44,7 +48,7 @@ header nav ul {
 
 header nav li {
     
-    padding-top: 25px;
+    padding-top: 19px;
     margin-right: 20px;
     padding-left: 30px;
 }
@@ -130,9 +134,15 @@ header nav a {
 
 /* Product Grid Styles */
 
+.product-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+}
+
 .product-grid {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 10px;
 }
 
 .product-grid h2 {
@@ -140,9 +150,10 @@ header nav a {
 }
 
 .product-card {
-    background-color: #fff;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
     padding: 20px;
-    margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -152,14 +163,14 @@ header nav a {
 }
 
 .product-card h3 {
-    margin-top: 0;
+    margin-top: auto;
     margin-bottom: 5px;
 }
 
 .product-card p {
     color: #333;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-top: 100px;
 }
 
 .product-card button {
@@ -171,11 +182,18 @@ header nav a {
     cursor: pointer;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px; /* add this line */
+}
+
 /* Footer Styles */
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color:white;
+    color:gray;
     padding: 20px;
     text-align: center;
 }
