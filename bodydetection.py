@@ -1,7 +1,7 @@
 import cv2 
 import numpy as np
 # from matplotlib import pyplot as plt
-body_detector = cv2.CascadeClassifier('../Downloads/haarcascade_upperbody.xml')
+body_detector = cv2.CascadeClassifier('haarcascade_upperbody.xml')
 vid = cv2.VideoCapture(0) 
 img = cv2.imread("../Downloads/pngegg.png")
 img2gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

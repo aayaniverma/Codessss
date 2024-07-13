@@ -89,25 +89,47 @@ header nav a {
 }
 
 .middle-section table {
-    width: 90%; /* Ensures equal column widths */
-    border-spacing: 10px;
-    margin: 0 auto;
-}
-
-.middle-section table th {
-    background-color: #f4f4f4;
-    padding: 10px;
-    text-align: left;
+    width: 90%;
+    padding-left: 30px;
 }
 
 .middle-section table td {
-    padding: 10px;
-    border: 1px solid #f4f4f4;
+    padding-right:none;
+    padding-bottom: 10px;
     vertical-align: top; /* Ensures content starts from the top */
+}
+
+.middle-section table td img {
+    height: auto;
+    width: 97.5%;
+    display: block; /* make the image a block element to center it horizontally */
+    margin: 0 auto; /* center the image horizontally */
 }
 
 .middle-section .text-cell {
     vertical-align: top; /* Ensures text starts from the top */
+}
+
+.trial-button {
+    height: calc(1.6em * 6); /* Covers height of 6 lines */
+    width: calc(1.6em * 6); /* Sets width same as height */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1.6em; /* Align text vertically */
+    border-radius: 5px;
+    padding: 0;
+}
+
+.hero-divider {
+    border-top: 1px solid #ccc; /* adjust the color and style as needed */
+    width: 100%; /* make the line full-width */
+    margin: 10px 0; /* add some margin to separate from the text and button */
 }
 
 footer {

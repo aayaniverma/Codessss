@@ -1,0 +1,24 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Python Code</title>
+</head>
+<body>
+    <button id="runButton">Run Python Code</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('runButton').addEventListener('click', function() {
+            fetch('http://127.0.0.1:5000/run-code')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').textContent = data.result;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Clone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles4.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('web') }}"><img style="height: 60px;" src="{{ url_for('static', filename='Screenshot 2024-07-11 235132.png') }}"></a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Home & Living</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Studio</a></li>
+                <li style="margin-left: 60px;">
+                    <form>
+                        <button type="button" onclick="startVideo()"><span class="material-symbols-rounded">search</span></button>
+                        <input type="search" placeholder="Search for products, brands and more">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="middle-section">
+        <table>
+            <tr>
+                <td><img src="{{ url_for('static', filename='demo1.png') }}" alt="Photo 1"></td>
+                <td><img src="{{ url_for('static', filename='demo1.png') }}" alt="Photo 2"></td>
+                <td class="text-cell" rowspan="2" style="padding-left: 30px;">
+                    <h2>MOD ECRU</h2>
+                    <p>Unisex Typography Printed T-shirt</p>
+                    <br>
+                    <hr class="hero-divider">
+                    <p>₹699</p>
+                    <p>inclusive of all taxes</p><br>
+                    <button class="trial-button" onclick="startVideo()">Start Video</button>
+                    <br><br>
+                    <p>SELECT SIZE</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ url_for('static', filename='demo1.png') }}" alt="Photo 3"></td>
+                <td><img src="{{ url_for('static', filename='demo1.png') }}" alt="Photo 4"></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Myntra-HackerRamp Clone</p>
+    </footer>
+
+    <script>
+        function startVideo() {
+            window.location.href = "{{ url_for('video_feed') }}";
+        }
+    </script>
+</body>
+</html>
