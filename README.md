@@ -14,7 +14,9 @@ Requirements:
 1.Python Libraries
 -Ensure you have Python installed on your system.
 -Install necessary Python packages using pip
+
 ![Screenshot 2024-07-14 054613](https://github.com/user-attachments/assets/ee4d6670-ecdd-487c-a8d3-132ef113bdc8)
+
 2.Blender
 Blender software should be installed for 3D modeling purposes.
 Models created using Blender can be integrated into the virtual try-on experience.
