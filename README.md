@@ -1,23 +1,23 @@
 # Myntra-HackerRamp
-Visual 3D Trial for Clothes
-This project utilizes computer vision and 3D modeling technologies to provide a virtual try-on experience for clothes.
+<p>Visual 3D Trial for Clothes</p>
+<p>This project utilizes computer vision and 3D modeling technologies to provide a virtual try-on experience for clothes.</p>
 
-Technologies Used:
--OpenCV: Used for real-time computer vision tasks, such as capturing video from a webcam and image processing.
--MediaPipe: Integrated for holistic body pose estimation and hand tracking.
--VR & AR: Virtual Reality (VR) and Augmented Reality (AR) techniques are employed for immersive visualization.
--Flask: Web framework utilized for developing the web application and serving it locally.
--MongoDB: NoSQL database used for storing user data and preferences securely.
--Blender 3D Modeling: Employed for creating detailed 3D models of clothes for virtual try-on.
+<p>Technologies Used:</p>
+<p>-OpenCV: Used for real-time computer vision tasks, such as capturing video from a webcam and image processing.</p>
+<p>-MediaPipe: Integrated for holistic body pose estimation and hand tracking.</p>
+<p>-VR & AR: Virtual Reality (VR) and Augmented Reality (AR) techniques are employed for immersive visualization.</p>
+<p>-Flask: Web framework utilized for developing the web application and serving it locally.</p>
+<p>-MongoDB: NoSQL database used for storing user data and preferences securely.</p>
+<p>-Blender 3D Modeling: Employed for creating detailed 3D models of clothes for virtual try-on.</p>
 
-Requirements:
-1.Python Libraries
--Ensure you have Python installed on your system.
--Install necessary Python packages using pip
+<p>Requirements:</p>
+<p>1.Python Libraries</p>
+<p>-Ensure you have Python installed on your system.</p>
+<p>-Install necessary Python packages using pip</p>
 
-![Screenshot 2024-07-14 054613](https://github.com/user-attachments/assets/ee4d6670-ecdd-487c-a8d3-132ef113bdc8)
+<p>![Screenshot 2024-07-14 054613](https://github.com/user-attachments/assets/ee4d6670-ecdd-487c-a8d3-132ef113bdc8)</p>
 
-2.Blender
+<p>2.Blender</p>
 Blender software should be installed for 3D modeling purposes.
 Models created using Blender can be integrated into the virtual try-on experience.
 
