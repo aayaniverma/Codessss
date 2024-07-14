@@ -15,7 +15,7 @@
 <p>-Ensure you have Python installed on your system.</p>
 <p>-Install necessary Python packages using pip</p>
 <br>
-<p>![Screenshot 2024-07-14 054613](https://github.com/user-attachments/assets/ee4d6670-ecdd-487c-a8d3-132ef113bdc8)</p>
+![Screenshot 2024-07-14 054613](https://github.com/user-attachments/assets/ee4d6670-ecdd-487c-a8d3-132ef113bdc8)
 <br>
 <p>2.Blender</p>
 <p>Blender software should be installed for 3D modeling purposes.</p>
