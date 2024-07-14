@@ -17,6 +17,7 @@ def generate_frames():
                 print("No frame captured!")
                 break
             
+    
             print("Processing frame...")
             
             # Convert the image to RGB
@@ -26,7 +27,7 @@ def generate_frames():
             results = holistic.process(image_rgb)
             
             # Draw face landmarks
-            mp_drawing.draw_landmarks(frame, results.face_landmarks, mp_holistic.FACE_CONNECTIONS)
+            mp_drawing.draw_landmarks(frame, results.face_landmarks, mp_holistic.POSE_CONNECTIONS)
             
             # Draw right hand landmarks
             mp_drawing.draw_landmarks(frame, results.right_hand_landmarks, mp_holistic.HAND_CONNECTIONS)
