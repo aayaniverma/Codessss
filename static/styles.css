@@ -1,5 +1,3 @@
-/* Global Styles */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,8 +21,6 @@ body {
     padding: 20px;
 }
 
-/* Header Styles */
-
 header {
     background-color:white;
     color:black;
@@ -34,7 +30,7 @@ header {
 }
 
 header nav {
-    height: 60px; /* added this to set the nav height */
+    height: 60px; 
 }
 
 header nav ul {
@@ -63,7 +59,7 @@ header nav li input[type="search"] {
     color:gray;
     height: 30px;
     border: none;
-    width: 450px; /* adjust width as needed */
+    width: 450px;
     border-radius: 2px;
 }
 
@@ -76,7 +72,7 @@ header nav li button[type="submit"] {
     font-size: 18px;
     cursor: pointer;
     border-radius: 2px;
-    margin-right: 2px; /* add some space between input and button */
+    margin-right: 2px; 
 }
 
 header nav a {
@@ -84,40 +80,38 @@ header nav a {
     text-decoration: none;
 }
 
-/* Hero Styles */
-
-.hero {
-    position: relative; /* add this to create a containing block */
+.Show_sec {
+    position: relative;
     height: 400px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     color: #333;
-    background-color: #fff; /* set background color to white */
+    background-color: #fff; 
 }
 
-.hero-image {
-    position: absolute; /* position the image absolutely */
+.Show_sec-image {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 70%; /* adjust the width as needed */
+    width: 70%; 
     height: 100%;
     object-fit: cover;
 }
 
-.hero-content {
+.Show_sec-content {
     position: relative;
-    padding-left: 920px; /* position the content relatively */
-    z-index: 1; /* bring the content to the front */
+    padding-left: 920px;
+    z-index: 1; 
     text-align: left;
 }
 
-.hero h1 {
+.Show_sec h1 {
     font-size: 36px;
     margin-bottom: 10px;
 }
 
-.hero button {
+.Show_sec button {
     background-color:transparent;
     color: #ccc;
     border: none;
@@ -126,20 +120,18 @@ header nav a {
     cursor: pointer;
 }
 
-.hero-divider {
-    border-top: 1px solid #ccc; /* adjust the color and style as needed */
-    width: 100%; /* make the line full-width */
-    margin: 10px 0; /* add some margin to separate from the text and button */
+.divider {
+    border-top: 1px solid #ccc; 
+    width: 100%; 
+    margin: 10px 0;
 }
 
-/* Product Grid Styles */
-
 .product-grid-containers {
-    width: 80%; /* Set the width to 90% of its container */
-    margin: 0 auto; /* Center align the grid */
+    width: 80%; 
+    margin: 0 auto; 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax and width as needed */
-    gap: 10px; /* Adjust gap between cards */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; 
 }
 
 .product-grid {
@@ -152,20 +144,20 @@ header nav a {
 }
 
 .product-card {
-    width: 230px; /* Set a fixed width for all product cards */
-    height: 300px; /* Set a fixed height for all product cards */
+    width: 230px; 
+    height: 300px; 
     box-sizing: border-box;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Ensure content stacks properly */
-    justify-content: space-between; /* Space between image and content */
+    flex-direction: column; 
+    justify-content: space-between;
 }
 
 .product-card img {
-    width: 100%; /* Ensure image spans full width of card */
-    height: 75%; /* Three-quarters of the product card height */
-    object-fit: cover; /* Ensure the image covers its entire area */
+    width: 100%; 
+    height: 75%; 
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
@@ -177,10 +169,8 @@ header nav a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px; /* add this line */
+    margin-top: 20px;
 }
-
-/* Footer Styles */
 
 footer {
     background-color:white;
