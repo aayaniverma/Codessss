@@ -1,11 +1,21 @@
 from flask import Flask, render_template, Response
 import cv2
 import mediapipe as mp
+import numpy as np
 
 app = Flask(__name__)
 
 mp_drawing = mp.solutions.drawing_utils
 mp_holistic = mp.solutions.holistic
+
+# Load the t-shirt image
+t_shirt_img = cv2.imread(r'C:\Users\Dell\OneDrive\Desktop\Myntra-HackerRamp\shirt-img.jpg', cv2.IMREAD_UNCHANGED)
+if t_shirt_img is None:
+    print(f"Error loading t-shirt image from 'C:\\Users\\Dell\\OneDrive\\Desktop\\Myntra-HackerRamp\\shirt-img.jpg'")
+else:
+    shirt_height, shirt_width, channels = t_shirt_img.shape
+    t_shirt_center_x = shirt_width / 2
+    t_shirt_center_y = shirt_height / 2
 
 vid = cv2.VideoCapture(0)
 
@@ -17,7 +27,6 @@ def generate_frames():
                 print("No frame captured!")
                 break
             
-    
             print("Processing frame...")
             
             # Convert the image to RGB
@@ -35,9 +44,33 @@ def generate_frames():
             # Draw left hand landmarks
             mp_drawing.draw_landmarks(frame, results.left_hand_landmarks, mp_holistic.HAND_CONNECTIONS)
             
-            # Draw pose landmarks
-            mp_drawing.draw_landmarks(frame, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS)
-            
+            # Draw pose landmarks and overlay t-shirt image
+            if results.pose_landmarks and t_shirt_img is not None:
+                landmarks = results.pose_landmarks.landmark
+                shoulder_left = landmarks[mp_holistic.PoseLandmark.LEFT_SHOULDER.value]
+                shoulder_right = landmarks[mp_holistic.PoseLandmark.RIGHT_SHOULDER.value]
+                hip_left = landmarks[mp_holistic.PoseLandmark.LEFT_HIP.value]
+                hip_right = landmarks[mp_holistic.PoseLandmark.RIGHT_HIP.value]
+
+                x_coords = [shoulder_left.x, shoulder_right.x, hip_left.x, hip_right.x]
+                y_coords = [shoulder_left.y, shoulder_right.y, hip_left.y, hip_right.y]
+
+                x_avg = sum(x_coords) / len(x_coords)
+                y_avg = sum(y_coords) / len(y_coords)
+
+                # Calculate the offset between the center of the body and the center of the t-shirt image
+                offset_x = int(max(0, min(x_avg * frame.shape[1] - t_shirt_center_x, frame.shape[1] - shirt_width)))
+                offset_y = int(max(0, min(y_avg * frame.shape[0] - t_shirt_center_y, frame.shape[0] - shirt_height)))
+
+                # Overlay the t-shirt image on the webcam feed
+                roi = frame[offset_y:offset_y+shirt_height, offset_x:offset_x+shirt_width]
+                if t_shirt_img.shape[2] == 3:  # Check if the image has 3 channels (RGB)
+                    for c in range(0, 3):
+                        roi[:, :, c] = t_shirt_img[:, :, c]
+                else:  # Handle RGBA or other cases
+                    for c in range(0, 3):
+                        roi[:, :, c] = np.where(t_shirt_img[:, :, 3] == 0, roi[:, :, c], t_shirt_img[:, :, c])
+
             # Convert image back to BGR for displaying with OpenCV
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
             
@@ -47,19 +80,15 @@ def generate_frames():
             
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-            
-                        
-# Route to render the web.html template
+
 @app.route('/')
 def web():
     return render_template('web.html')
 
-# Route to render the product4.html template
 @app.route('/product4')
 def product4():
     return render_template('product4.html')
 
-# Route to provide the video feed with generated frames
 @app.route('/video_feed')
 def video_feed():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
