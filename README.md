@@ -1,5 +1,7 @@
-# Myntra-HackerRamp
-<p>Visual 3D Trial for Clothes</p>
+# Myntra-HackerRamp <video width="500" height="200" controls>
+   <source src="icon.mov" type="video/quicktime">
+</video><br>
+<p>Visual 3D Trial for Clothes</p> 
 <p>This project utilizes computer vision and 3D modeling technologies to provide a virtual try-on experience for clothes.</p>
 <br><br>
 <p>Technologies Used:</p>
@@ -10,7 +12,7 @@
 <p>-MongoDB: NoSQL database used for storing user data and preferences securely.</p>
 <p>-Blender 3D Modeling: Employed for creating detailed 3D models of clothes for virtual try-on.</p>
 <br><br>
-<p>Requirements:</p>
+<p>Requirements (requirements.txt):</p>
 <p>1.Python Libraries</p>
 <p>-Ensure you have Python installed on your system.</p>
 <p>-Install necessary Python packages using pip</p>
@@ -22,10 +24,12 @@
 <p>Getting Started:</p>
 <p>1.Clone this repository:</p>
 <p>"git clone https://github.com/aayaniverma/Myntra-HackerRamp"</p>
-<p>2.Install dependencies</p>
-<p>3.Start the Flask application:</p>
+<p>2.Create an environment:</p>
+<p>3.Install dependencies</p>
+<p>"pip install -r requirements.txt"</p>
+<p>4.Start the Flask application:</p>
 <p>"python app.py"</p>
-<p>4.Access the application locally in your web browser:</p>
+<p>5.Access the application locally in your web browser:</p>
 <p>"http://localhost:5000/"</p>
 <br><br>
 <p>Usage:</p>
