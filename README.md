@@ -14,9 +14,7 @@
 <p>1.Python Libraries</p>
 <p>-Ensure you have Python installed on your system.</p>
 <p>-Install necessary Python packages using pip</p>
-<br>
-![Screenshot 2024-07-14 054613](https://github.com/user-attachments/assets/ee4d6670-ecdd-487c-a8d3-132ef113bdc8)
-<br>
+<p>"pip install opencv-python mediapipe Flask pymongo"</p>
 <p>2.Blender</p>
 <p>Blender software should be installed for 3D modeling purposes.</p>
 <p>Models created using Blender can be integrated into the virtual try-on experience.</p>
