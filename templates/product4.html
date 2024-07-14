@@ -11,7 +11,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="{{ url_for('web') }}"><img style="height: 60px;" src="{{ url_for('static', filename='Screenshot 2024-07-11 235132.png') }}"></a></li>
+                <li style="padding-top: 0px;"><a href="{{ url_for('web') }}"><img style="height: 60px;" src="{{ url_for('static', filename='Screenshot 2024-07-11 235132.png') }}"></a></li>
                 <li><a href="#">Men</a></li>
                 <li><a href="#">Women</a></li>
                 <li><a href="#">Kids</a></li>
@@ -20,7 +20,7 @@
                 <li><a href="#">Studio</a></li>
                 <li style="margin-left: 60px;">
                     <form>
-                        <button type="button" onclick="startVideo()"><span class="material-symbols-rounded">search</span></button>
+                        <button type="button"><span class="material-symbols-rounded">search</span></button>
                         <input type="search" placeholder="Search for products, brands and more">
                     </form>
                 </li>
@@ -40,7 +40,15 @@
                     <hr class="hero-divider">
                     <p>₹699</p>
                     <p>inclusive of all taxes</p><br>
-                    <button class="trial-button" onclick="startVideo()">Start Video</button>
+                    <div class="wrapper">
+                        <div class="link_wrapper">
+                          <a onclick="startVideo()">Trial Room</a>
+                          <div class="icon">
+                            <span class="material-symbols-rounded" style="font-size: 35px;">photo_camera</span>
+                          </div>
+                        </div>
+                        
+                      </div>
                     <br><br>
                     <p>SELECT SIZE</p>
                 </td>
