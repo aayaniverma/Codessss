@@ -59,14 +59,6 @@ def generate_frames():
             # Process the image
             results = holistic.process(image_rgb)
             
-            # Draw face landmarks
-            mp_drawing.draw_landmarks(image_rgb, results.face_landmarks, mp_holistic.POSE_CONNECTIONS)
-            
-            # Draw right hand landmarks
-            mp_drawing.draw_landmarks(image_rgb, results.right_hand_landmarks, mp_holistic.HAND_CONNECTIONS)
-            
-            # Draw left hand landmarks
-            mp_drawing.draw_landmarks(image_rgb, results.left_hand_landmarks, mp_holistic.HAND_CONNECTIONS)
             
             # Draw pose landmarks and overlay t-shirt image
             if results.pose_landmarks and t_shirt_img is not None:
