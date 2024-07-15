@@ -9,7 +9,8 @@ mp_drawing = mp.solutions.drawing_utils
 mp_holistic = mp.solutions.holistic
 
 # Load the t-shirt image
-t_shirt_img = cv2.imread(r'C:\Users\Dell\OneDrive\Desktop\Myntra-HackerRamp\shirt-img.jpg', cv2.IMREAD_UNCHANGED)
+t_shirt_img = cv2.imread('image.jpeg', cv2.IMREAD_UNCHANGED)
+print(t_shirt_img.shape)
 if t_shirt_img is None:
     print(f"Error loading t-shirt image from 'C:\\Users\\Dell\\OneDrive\\Desktop\\Myntra-HackerRamp\\shirt-img.jpg'")
 else:
@@ -75,8 +76,8 @@ def generate_frames():
                 hip_left = landmarks[mp_holistic.PoseLandmark.LEFT_HIP.value]
                 hip_right = landmarks[mp_holistic.PoseLandmark.RIGHT_HIP.value]
 
-                x_coords = [shoulder_left.x, shoulder_right.x, hip_left.x, hip_right.x]
-                y_coords = [shoulder_left.y, shoulder_right.y, hip_left.y, hip_right.y]
+                x_coords = [shoulder_left.x, shoulder_right.x,hip_left.x, hip_right.x]
+                y_coords = [shoulder_left.y, shoulder_right.y,hip_left.y, hip_right.y]
 
                 x_avg = sum(x_coords) / len(x_coords)
                 y_avg = sum(y_coords) / len(y_coords)
@@ -97,7 +98,7 @@ def generate_frames():
             frame = cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR)
             
             # Encode frame to JPEG
-            ret, buffer = cv2.imencode('.jpg', frame)
+            ret, buffer = cv2.imencode('.jpeg', frame)
             frame = buffer.tobytes()
             
             yield (b'--frame\r\n'
