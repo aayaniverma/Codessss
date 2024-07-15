@@ -25,7 +25,7 @@
 <br><br>
 <p>Getting Started:</p>
 <p>1.Clone this repository:</p>
-<p>"git clone https://github.com/aayaniverma/Myntra-HackerRamp"</p>
+<p>"git clone https://github.com/aayaniverma/Codessss.git"</p>
 <p>2.Create an environment:</p>
 <p>3.Install dependencies</p>
 <p>"pip install -r requirements.txt"</p>
